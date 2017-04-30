@@ -110,9 +110,9 @@ static void ACCELERO_ReadAcc(void)
 		/* LED5 On right red: Angle : 0 to 90 degree*/
 		/*Time calculated to turn motor on: time needed: 2250 to 700*/
 		turnOn_time = 2420 - (xval*1550)/1800;
-		BSP_LED_On(LED6);
+		BSP_LED_On(LED5);
 		delayLoop(turnOn_time);
-		BSP_LED_Off(LED6);
+		BSP_LED_Off(LED5);
 		delayLoop(20000 - turnOn_time);
 	}
 	else if(xval < ThresholdLow)
@@ -120,16 +120,16 @@ static void ACCELERO_ReadAcc(void)
 		/* LED4 On left green: Angle : 90 to 180 degree*/
 		/*Time calculated to turn motor on: time needed: 2250 to 3800*/
 		turnOn_time = 2070 + (ABS(xval)*1550)/1800;
-		BSP_LED_On(LED6);      
+		BSP_LED_On(LED5);      
 		delayLoop(turnOn_time);
-		BSP_LED_Off(LED6);
+		BSP_LED_Off(LED5);
 		delayLoop(20000 - turnOn_time);
 	}
 	else//Delay made as the angle was uneven
 	{ 
-		BSP_LED_On(LED6);
+		BSP_LED_On(LED5);
 		delayLoop(2250);
-		BSP_LED_Off(LED6);
+		BSP_LED_Off(LED5);
 		delayLoop(20000 - 2250);
 	}
   }
