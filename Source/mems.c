@@ -174,7 +174,7 @@ void delayLoop(int16_t timeDelay)
 {
 	int16_t i,j;
 	for(i = 0; i < timeDelay;i=i+1){
-		for(j = 0; j <= 25; j=j+1);
+		for(j = 0; j <= 23; j=j+1);
 	}
 }
 
